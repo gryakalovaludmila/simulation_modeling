@@ -1,0 +1,52 @@
+	GENERATE 7,2
+	SEIZE	PRIBOR	
+	ADVANCE	4,3	
+	RELEASE	PRIBOR	
+	SEIZE PRIBOR2
+	ADVANCE 4,2
+	RELEASE PRIBOR2
+	TERMINATE
+	GENERATE 600
+	TERMINATE 1
+	START 1
+
+report:
+
+
+
+              GPSS World Simulation Report - lab1.6.1
+
+
+                   Monday, March 06, 2023 17:20:47  
+
+           START TIME           END TIME  BLOCKS  FACILITIES  STORAGES
+                0.000            600.000    10        2          0
+
+
+              NAME                       VALUE  
+          PRIBOR                      10000.000
+          PRIBOR2                     10001.000
+
+
+ LABEL              LOC  BLOCK TYPE     ENTRY COUNT CURRENT COUNT RETRY
+                    1    GENERATE            85             0       0
+                    2    SEIZE               85             0       0
+                    3    ADVANCE             85             0       0
+                    4    RELEASE             85             0       0
+                    5    SEIZE               85             0       0
+                    6    ADVANCE             85             1       0
+                    7    RELEASE             84             0       0
+                    8    TERMINATE           84             0       0
+                    9    GENERATE             1             0       0
+                   10    TERMINATE            1             0       0
+
+
+FACILITY         ENTRIES  UTIL.   AVE. TIME AVAIL. OWNER PEND INTER RETRY DELAY
+ PRIBOR              85    0.588       4.151  1        0    0    0     0      0
+ PRIBOR2             85    0.548       3.867  1       86    0    0     0      0
+
+
+FEC XN   PRI         BDT      ASSEM  CURRENT  NEXT  PARAMETER    VALUE
+    86    0         604.348     86      6      7
+    87    0         605.796     87      0      1
+    88    0        1200.000     88      0      9
